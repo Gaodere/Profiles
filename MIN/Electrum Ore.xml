@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Profile>
+  <Name>Electrum Ore Farm</Name>
+  <KillRadius>50</KillRadius>
+  <Order>
+    <While Condition="True">
+      <If Condition="(ItemCount(5115) &lt; 1000)">
+        <TeleportTo Name="Camp Bronze Lake" AetheryteId="15"/>
+        <Gather while="(ItemCount(5115) &lt; 1000)">
+          <GatherObject>Mineral Deposit</GatherObject>
+          <HotSpots>
+            <HotSpot Radius="95" XYZ="436.9715, -3.4, 184.5675"/>
+          </HotSpots>
+          <ItemNames>
+            <ItemName>Electrum Ore</ItemName>
+          </ItemNames>
+          <GatheringSkillOrder>
+            <GatheringSkill SpellName="King's Yield II" TimesToCast="1"/>
+          </GatheringSkillOrder>
+        </Gather>
+      </If>
+    </While>
+  </Order>
+</Profile>
